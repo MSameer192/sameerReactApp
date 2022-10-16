@@ -28,7 +28,7 @@ export default function TextForm(props) {
         <button className="btn btn-primary mt-4 px-5" onClick={tOUpperCase} > TO UPPER CASE </button>
         <button className="btn btn-primary mt-4 mx-5 px-5" onClick={tOLowerCase} > TO LOWER CASE </button>
 
-        <h1 className='mt-2'>Text Summary</h1>
+        <h2 className='mt-3'>Text Summary</h2>
         <p>{text.split(" ").length} words and {text.length} characters</p>
 
         <h2>Preview</h2>
