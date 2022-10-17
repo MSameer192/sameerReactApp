@@ -1,6 +1,7 @@
 import './App.css';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
+import About from './components/About';
 
 
 
@@ -13,8 +14,9 @@ function App() {
       <Navbar title= "TexUtils" home="HOME"/>
       {/* <Navbar/> */}
       
-      <TextForm heading="Put text for Change format" />
+      {/* <TextForm heading="Put text for Change format" /> */}
 
+      <About/>
       </>
     </div>
   );
