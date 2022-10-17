@@ -23,6 +23,11 @@ export default function TextForm(props) {
     setText(event.target.value)
   }
 
+  const toHandleCopy = () => {
+    let text = document.getElementById("exampleFormControlTextarea1");
+    text.select();
+    navigator.clipboard.writeText(text.value)
+  }
   
   const tOCapitalEachWord = () => {
     
@@ -52,7 +57,7 @@ export default function TextForm(props) {
         <button className="btn btn-primary mt-4 mx-3 px-5" onClick={tOLowerCase} > TO LOWER CASE </button>
         <button className="btn btn-primary mt-4 mx-3 px-5" onClick={tOCapitalEachWord} > TO CAPITAL EACH FIRST WORD </button>
         <button className="btn btn-primary mt-4 mx-3 px-5" onClick={tOClearCase} > TO CLEAR TEXT </button>
-
+        <button className="btn btn-primary mt-4 mx-3 px-5" onClick={toHandleCopy} > TO COPY TEXT </button>
 
 
         <h2 className='mt-3'>Text Summary</h2>
