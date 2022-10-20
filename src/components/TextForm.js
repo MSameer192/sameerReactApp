@@ -46,27 +46,27 @@ export default function TextForm(props) {
 
 
   
-  const [text, setText] = useState("Put any text to chaneg format");   
+  const [text, setText] = useState("Put any text to change format");   
 
 
   return (
-    <div className="mt-5 container text-start">
+    <div className="mt-5 container text-start" style={{color: props.mode==='dark'? 'white':'black'}}>
         <h1 className=''> {props.heading} </h1>
-        <textarea className="form-control mt-4" id="exampleFormControlTextarea1" value={text} rows="10" onChange={tOHandleOnChange}></textarea>
+        <textarea className="form-control mt-4" id="exampleFormControlTextarea1" style={{color: props.mode==='dark'? 'white':'black', backgroundColor:props.mode==='dark'? 'grey':'white' }} value={text} rows="10" onChange={tOHandleOnChange}></textarea>
         <button className="btn btn-primary mt-4 px-5" onClick={tOUpperCase} > TO UPPER CASE </button>
         <button className="btn btn-primary mt-4 mx-3 px-5" onClick={tOLowerCase} > TO LOWER CASE </button>
         <button className="btn btn-primary mt-4 mx-3 px-5" onClick={tOCapitalEachWord} > TO CAPITAL EACH FIRST WORD </button>
         <button className="btn btn-primary mt-4 mx-3 px-5" onClick={tOClearCase} > TO CLEAR TEXT </button>
         <button className="btn btn-primary mt-4 mx-3 px-5" onClick={toHandleCopy} > TO COPY TEXT </button>
 
-
-        <h2 className='mt-3'>Text Summary</h2>
+      <div style={{color: props.mode==='dark'? 'white':'black'}}>
+        <h2 className='mt-3'>Text Summary</h2 >
         <p>{text.split(" ").length} words and {text.length} characters</p>
         <p>{ 0.008 * text.split(" ").length} Minutes read</p>
 
         <h2>Preview</h2>
         <p>{text}</p>
-
+      </div>
 
     </div>
   );
