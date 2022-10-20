@@ -46,7 +46,7 @@ export default function TextForm(props) {
 
 
   
-  const [text, setText] = useState("Put any text to change format");   
+  const [text, setText] = useState("");   
 
 
   return (
@@ -65,7 +65,7 @@ export default function TextForm(props) {
         <p>{ 0.008 * text.split(" ").length} Minutes read</p>
 
         <h2>Preview</h2>
-        <p>{text}</p>
+        <p>{text.length>0?text:"Enter something in the textbox to preview it here"}</p>
       </div>
 
     </div>

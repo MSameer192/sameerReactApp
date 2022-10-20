@@ -19,8 +19,8 @@ function App() {
 
     if (mode === "light") {
       setMode('dark')
-      setModeBtnText('Enable Light Mode')
-      document.body.style.backgroundColor = 'gray'
+      setModeBtnText('Disable Dark Mode')
+      document.body.style.backgroundColor = '#042743'
       // myNewStyle({
       //   color: 'white',
       // })
