@@ -3,20 +3,25 @@ import React, {useState} from 'react';
 
 
 export default function TextForm(props) {
-
+  
+  const [text, setText] = useState("");   
+  
   const tOUpperCase = () => {
     let newText = text.toLocaleUpperCase()
     setText(newText)
+    props.showAlert('Converted to Upper Case', 'info')
   }
 
   const tOLowerCase = () => {
     let newText = text.toLocaleLowerCase()
     setText(newText)
+    props.showAlert('Converted to Lower Case', 'info')
   }
 
   const tOClearCase = () => {
     let newText = ""
     setText(newText)
+    props.showAlert('Text Cleared', 'info')
   }
   
   const tOHandleOnChange = (event) => {
@@ -27,6 +32,7 @@ export default function TextForm(props) {
     let text = document.getElementById("exampleFormControlTextarea1");
     text.select();
     navigator.clipboard.writeText(text.value)
+    props.showAlert('Text copy to ClipBoard!', 'info')
   }
   
   const tOCapitalEachWord = () => {
@@ -42,12 +48,9 @@ export default function TextForm(props) {
 
     const UpdatedCase = ArrForCapital.join(" ");
     setText(UpdatedCase);
+    props.showAlert('Each word Capitalized', 'info')
+
   };
-
-
-  
-  const [text, setText] = useState("");   
-
 
   return (
     <div className="mt-5 container text-start" style={{color: props.mode==='dark'? 'white':'black'}}>
