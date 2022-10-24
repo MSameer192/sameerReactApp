@@ -3,6 +3,9 @@ import React, {useState} from 'react';
 
 
 export default function About() {
+
+    document.title = 'TextUtils - About'
+
     const [myStyle, setMyStyle] = useState({
         color : "black",
         backgroundColor : "gray"
@@ -27,6 +30,8 @@ export default function About() {
             })
             setBtnText("Enable Dark Mode")
         }
+
+
     }
 
     

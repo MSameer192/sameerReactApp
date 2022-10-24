@@ -46,6 +46,7 @@ function App() {
 
 
 
+
   return (
       <>
         
@@ -54,7 +55,7 @@ function App() {
         <Alert alert={alert} />
         <Routes>
             <Route path="/about" element={<About />} />
-            <Route path="/" element={<TextForm showAlert={showAlert} heading="Put text for Change format" mode={mode} />} />
+            <Route path="/" element={<TextForm showAlert={showAlert} heading="Put text for Change format" mode={mode}  />} />
               
         </Routes>
       </BrowserRouter>

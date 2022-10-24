@@ -3,6 +3,9 @@ import React, {useState} from 'react';
 
 
 export default function TextForm(props) {
+
+  document.title = 'TextUtils - Home'
+
   
   const [text, setText] = useState("");   
   
@@ -49,6 +52,8 @@ export default function TextForm(props) {
     const UpdatedCase = ArrForCapital.join(" ");
     setText(UpdatedCase);
     props.showAlert('Each word Capitalized', 'info')
+
+
 
   };
 
